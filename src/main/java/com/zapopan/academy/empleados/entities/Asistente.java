@@ -26,7 +26,7 @@ public class Asistente {
     private String Apellido_paterno;
  
     @Column(unique = true)
-    private String Curp;
+    private String curp;
 
 
 
