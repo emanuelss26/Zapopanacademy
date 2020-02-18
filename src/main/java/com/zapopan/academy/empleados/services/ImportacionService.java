@@ -29,10 +29,21 @@ public class ImportacionService {
                 continue;
             }
             Asistente asistente = new Asistente();
-            asistente.setNombre(r.getCell(0).getStringCellValue());
-            asistente.setApellido_materno(r.getCell(1).getStringCellValue());
-            asistente.setApellido_paterno(r.getCell(2).getStringCellValue());
-            asistente.setCurp(r.getCell(3).getStringCellValue());
+            asistente.setCurp(r.getCell(0).getStringCellValue());
+            asistente.setNombre(r.getCell(1).getStringCellValue());
+            asistente.setApellidoPaterno(r.getCell(2).getStringCellValue());
+            asistente.setApellidoMaterno(r.getCell(3).getStringCellValue());
+            asistente.setSexo(r.getCell(4).getStringCellValue());
+            asistente.setCalle(r.getCell(5).getStringCellValue());
+            asistente.setNumeroExt(r.getCell(6).getStringCellValue());
+            asistente.setNumeroInt(r.getCell(7).getStringCellValue());
+            asistente.setCodigo(r.getCell(8).getStringCellValue());
+            asistente.setColonia(r.getCell(9).getStringCellValue());
+            asistente.setMunicipio(r.getCell(10).getStringCellValue());
+            asistente.setEstado(r.getCell(11).getStringCellValue());
+            asistente.setTelefonoCasa(r.getCell(12).getStringCellValue());
+            asistente.setTelefonoCelular(r.getCell(13).getStringCellValue());
+
 
             asistenteDao.save(asistente);
         }

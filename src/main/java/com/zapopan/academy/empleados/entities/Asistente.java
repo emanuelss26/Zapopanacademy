@@ -15,23 +15,49 @@ public class Asistente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
-    @Column
-    private String Nombre ;
-
-    @Column
-    private String Apellido_materno;
-
-    @Column
-    private String Apellido_paterno;
- 
+    
     @Column(unique = true)
     private String curp;
 
+    @Column
+    private String nombre ;
 
+    @Column
+    private String apellidoMaterno;
 
-    // Como le haria para importar las columnas directamente del excel
+    @Column
+    private String apellidoPaterno;
+ 
+    @Column 
+    private String sexo;
     
+    @Column 
+    private String calle;
+
+    @Column 
+    private String numeroExt;
+
+    @Column 
+    private String numeroInt;
+
+    @Column 
+    private String codigo;
+
+    @Column 
+    private String colonia;
+
+    @Column 
+    private String municipio;
+
+    @Column 
+    private String estado;
+
+    @Column 
+    private String telefonoCasa;
+
+    @Column 
+    private String telefonoCelular;
+         
     
     @ManyToMany (mappedBy = "asistentes")
     private List <Evento> eventos;
